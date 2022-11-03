@@ -6,11 +6,11 @@ const bodyParser = require('body-parser');
 const path = require("path");
 
 const port = 3000;
-app.use(cors())
+app.use(cors());
 app.use(bodyParser.json()); // Parse json body
 app.use(express.static(path.join(__dirname, 'public')));
 
-require("./api/demo")(app);
+require("./api/articles")(app);
 
 app.get('', (req, res) => { // Serve index page
     res.sendFile("./public/index.html");

@@ -6,12 +6,63 @@
     <title>Article</title>
     <link rel="stylesheet" href="./style.css">
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-    <script defer src="./index.js"></script>
+    <script src="./index.js"></script>
 </head>
 <body>
     <h1>Article API</h1>
-    <button>Ajouter</button>
+    <h3>Afficher les articles</h3>
+    <div id="articles"></div>
+    <select name="get_articles" id="scroll_list"></select>
+    <button onclick="handleClick('api/articles/1')">Afficher</button>
+
+    <h3>Créer un article</h3>
+    <form action="" method="post">
+        <div>
+            <label for="theme">Theme</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="titre">Titre</label>
+            <input type="text"></div>
+        <div>
+            <label for="auteur">Auteur</label>
+            <input type="text">
+        </div>
+        <div>
+            <input type="submit" value="Ajouter">
+        </div>
+    </form>
+    
+    <h3>Modifier un article</h3>
+    <form action="" method="post">
+        <div>
+            <label for="id">Id</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="theme">Theme</label>
+            <input type="text">
+        </div>
+        <div>
+            <label for="titre">Titre</label>
+            <input type="text"></div>
+        <div>
+            <label for="auteur">Auteur</label>
+            <input type="text">
+        </div>
+        <div>
+            <input type="submit" value="Modifier">
+        </div>
+    </form>
+    
+    <h3>Supprimer un article</h3>
+    <input type="text">
     <button>Supprimer</button>
-    <button>Modifier</button>
+    
+    
+    
+    
+    
+    
 </body>
 </html>
