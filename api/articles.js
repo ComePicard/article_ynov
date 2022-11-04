@@ -1,4 +1,4 @@
-const articles = require('../database/articles.json');
+const articles = require('../database/articles');
 
 module.exports = (app)=>{
 
@@ -17,8 +17,8 @@ module.exports = (app)=>{
 
     app.get("/api/articles/:id", (req, res) => { // Get one article data
         try {
-            if (!articles[req.params.id]) throw "User not found"; // Catch invalid id
-            return res.status(200).send(articles[req.params.id]);
+            if (!articles.articles[req.params.id]) throw "User not found"; // Catch invalid id
+            return res.status(200).send(articles.articles[req.params.id]);
         } catch (err) {
             console.error(err);
             return res.status(404).send({message: err, status: 404});
