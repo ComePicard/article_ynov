@@ -11,9 +11,15 @@
 <body>
     <h1>Article API</h1>
     <h3>Afficher les articles</h3>
-    <div id="articles"></div>
-    <select name="get_articles" id="scroll_list"></select>
-    <button onclick="handleClick('api/articles/1')">Afficher</button>
+    <div>
+        <div id="all_articles"></div>
+        <button onclick="handleClick('api/articles')">Afficher tous les articles</button>
+    </div>
+    <div>
+
+        <input type="number" min="1" id="select_article">
+        <button id="print_article">Afficher</button>
+    </div>
 
     <h3>Créer un article</h3>
     <form action="" method="post">
