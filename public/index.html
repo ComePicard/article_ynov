@@ -22,23 +22,18 @@
     </div>
 
     <h3>Créer un article</h3>
-    <form action="" method="post">
-        <div>
-            <label for="theme">Theme</label>
-            <input type="text">
-        </div>
-        <div>
-            <label for="titre">Titre</label>
-            <input type="text"></div>
-        <div>
-            <label for="auteur">Auteur</label>
-            <input type="text">
-        </div>
-        <div>
-            <input type="submit" value="Ajouter">
-        </div>
-    </form>
-    
+    <div id="add_article"></div>
+    <div>
+        <input type="text" id="theme" placeholder="Theme">
+    </div>
+    <div>
+        <input type="text" id="titre" placeholder="Titre">
+    </div>
+    <div>
+        <input type="text" id="auteur" placeholder="Auteur">
+    </div>
+    <button onclick="handleClickPost('api/articles')">Ajouter</button>
+
     <h3>Modifier un article</h3>
     <form action="" method="post">
         <div>

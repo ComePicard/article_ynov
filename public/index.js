@@ -33,7 +33,7 @@ function handleClickPut(route) {
         headers: {
             'Content-Type': 'application/json'
         }
-    }
+    };
 
     axios.put(url, body, config).then((res) => {
         el.innerHTML = JSON.stringify(res.data);
@@ -45,9 +45,25 @@ function handleClickPut(route) {
 
 function handleClickPost(route){
     let url = "http://localhost:3000/" + route;
-}
-
-function print_all_articles(){
-}
-
-print_all_articles();
+    let el = document.getElementById("add_article");
+    let theme = document.getElementById("theme").value;
+    let titre = document.getElementById("titre").value;
+    let auteur = document.getElementById("auteur").value;
+    let body = {
+        "theme": theme,
+        "titre": titre,
+        "auteur": auteur,    
+    };
+    let config = {
+        headers: {
+            'Content-Type': 'application/json'
+        }
+    };
+    
+    axios.post(url, body, config).then((res)=>{
+        el.innerHTML = JSON.stringify(res.data);
+    }).catch((err)=>{
+        console.error(err.message);
+        el.innerHTML = err.message;
+    })
+}   

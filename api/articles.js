@@ -36,4 +36,24 @@ module.exports = (app)=>{
             return res.status(500).send({message: err, status: 500});
         }
     });
+
+    app.post('/api/articles', (res, req) =>{
+        try{
+            let id = articles.articles[articles.articles.length-1].id+1
+            let theme = req.body.theme;
+            let titre = req.body.titre;
+            let auteur = req.body.auteur;
+            let article = {
+                id: id,
+                theme: theme,
+                titre: titre,
+                auteur: auteur,
+            };
+            articles.articles.push(article);
+            return res.status(200).send(article);
+        }catch(e){
+            console.error(e);
+            return res.status(500).send({message: e, status: 500});
+        }
+    })
 }
