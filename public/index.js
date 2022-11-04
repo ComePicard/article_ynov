@@ -1,3 +1,5 @@
+let bienouej = false;
+
 function handleClick(route) {
     let url = "http://localhost:3000/" + route;
     let el = document.getElementById("all_articles");
@@ -6,11 +8,15 @@ function handleClick(route) {
     axios.get(url, id).then((res) => {
         let articles = res.data;
         let taille = articles.articles.length;
+
         console.log(taille);
-        for(let i=0 ; i<taille ; i++){
-            let div = document.createElement("div");
-            div.innerHTML = JSON.stringify(articles.articles[i]);
-            el.appendChild(div);
+        if(!bienouej){
+            for(let i=0 ; i<taille ; i++){
+                let div = document.createElement("div");
+                div.innerHTML = JSON.stringify(articles.articles[i]);
+                el.appendChild(div);
+            }
+            bienouej = !bienouej;
         }
     }).catch((err) => {
         console.error(err.message);
