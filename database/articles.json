@@ -2,18 +2,17 @@
     "articles": [{
         "id": 1,
         "theme": "Immobilier",       
-        "titre": "",
-        "auteur":"Jean Dupont"
+        "titre": "Les prix flambent en Meurthe-et-Moselle !",
+        "auteur": "Jean Dupont"
     }, {
         "id": 2,
-        "theme": "Immobilier",       
-        "titre": "",
-        "auteur":"Richard Lourbet"
+        "theme": "Énergie",       
+        "titre": "Il débranche sa grand-mère pour faire des économies d'énergie",
+        "auteur": "Richard Lourbet"
     }, {
         "id": 3,
-        "theme": "Immobilier",       
-        "titre": "",
-        "auteur":"Michel Balbare"
-    }
-]
+        "theme": "Promotion",       
+        "titre": "Le black friday arrive ! Jusqu'à -35% sur l'eau de bain de Pokimane !",
+        "auteur": "Michel Balbare"
+    }]
 }
